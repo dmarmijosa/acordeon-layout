@@ -1,0 +1,50 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+[class$="__contenedor"] {
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 90%;
+}
+.acordeon {
+  margin: 0 auto;
+  display: flex;
+  
+  width: 90%;
+  height: 43rem;
+}
+@media (min-width: 768px) {
+  .acordeon {
+    width: 600px;
+    height: 430px;
+  }
+}
+.acordeon img {
+  width: 0;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.9;
+  transition: 0.5s ease-out;
+}
+.acordeon img:hover {
+  cursor: crosshair;
+  width: 40%;
+  opacity: 1;
+  filter: contrast(120%);
+}
+@media (min-width: 768px) {
+    .acordeon img:hover{
+        width: 300px;
+    }
+}
